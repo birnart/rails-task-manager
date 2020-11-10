@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+.task-list-items {
+  text-decoration: none;
+  display: flex;
+}
+
+.task-list-items {
+  margin-bottom: 10px;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px lightgrey;
+}
+
+.task-list-items > p {
+  margin: 5px;
+}
+
+h1, p, a, form {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0,4s;
+}
+
+a:hover {
+  opacity: 0.3;
+}
+
+.card {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 5px 15px grey;
+  background-color: lightgrey;
+  text-decoration: none;
+  display: flex;
+}

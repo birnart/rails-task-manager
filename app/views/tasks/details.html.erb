@@ -1,0 +1,15 @@
+<h1><%= @task.title %> </h1>
+
+<div class="card">
+  <p><%= @task.details %></p>
+</div>
+
+<% if @task.compleated != false %>
+  <p><%= "This task has been compleated" %></p>
+<% else %>
+  <p><%= "This task has not been compleated" %></p>
+<% end %>
+
+<%= link_to "Edit this task", "#{@task[:id]}/edit" %>
+<%= link_to "Delete this task", task_path(@task), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Back to list", "/list" %>

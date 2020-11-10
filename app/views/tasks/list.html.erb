@@ -1,9 +1,14 @@
 <h1>My tasks</h1>
-<ul>
+<ul class="task-list">
   <% @tasks.each do |task| %>
-    <li>
-      <h3><%= task.title %></h3>
-      <p><%= task.details %></p>
+    <li class="card">
+      <% if task.compleated != false %>
+        <h3>[x] - <%= link_to "#{task.title}", "tasks/#{task[:id]}" %></h3>
+      <% else %>
+        <h3>[ ] - <%= link_to "#{task.title}", "tasks/#{task[:id]}" %></h3>
+      <% end %>
     </li>
   <% end %>
 </ul>
+<%= link_to "+Add new task", "/task/new" %>
+
